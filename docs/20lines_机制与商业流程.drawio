@@ -1,0 +1,84 @@
+<mxfile host="app.diagrams.net" modified="2026-10-28T00:00:00.000Z" agent="Codex" version="24.7.17">
+  <diagram id="20lines-flow" name="20 Lines 机制与商业流程">
+    <mxGraphModel dx="1800" dy="1100" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="title" value="优先级：U1   20 Lines Social：机制与商业流程" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=26;fontStyle=1;fontColor=#1F2933;" vertex="1" parent="1">
+          <mxGeometry x="45" y="20" width="900" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="Base 20 线 → 蓄水池加分 → 满 100 分触发 1 次 Free Spin → 清零回主游戏" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14;fontColor=#59636E;" vertex="1" parent="1">
+          <mxGeometry x="47" y="65" width="1100" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="base" value="Base Spin&#xa;支付 1 倍总下注" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DDEBF7;strokeColor=#6C8EBF;strokeWidth=2;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="45" y="190" width="175" height="86" as="geometry"/>
+        </mxCell>
+        <mxCell id="lines" value="20 条固定线结算&#xa;7 个普通符号" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DDEBF7;strokeColor=#6C8EBF;strokeWidth=2;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="190" width="180" height="86" as="geometry"/>
+        </mxCell>
+        <mxCell id="d-win" value="出现中奖线 ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=2;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="165" width="180" height="136" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="payout" value="按中奖线赔率派彩&#xa;赔率 = 总下注倍数 / 中奖线" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="720" y="125" width="240" height="86" as="geometry"/>
+        </mxCell>
+        <mxCell id="meter-add" value="蓄水池加分&#xa;每条中奖线：max(1, round(赔率×2))" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="125" width="250" height="86" as="geometry"/>
+        </mxCell>
+        <mxCell id="no-win" value="无中奖线&#xa;派彩 0；蓄水池不变" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#999999;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="720" y="305" width="240" height="78" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="d-meter" value="蓄水池 ≥ 100 ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=2;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="275" width="210" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="keep" value="蓄水池保留&#xa;下一 Base Spin 继续累计" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#999999;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="300" width="190" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="reset" value="触发 1 次 FS&#xa;蓄水池立即清零&#xa;溢出分数丢弃" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDE9D9;strokeColor=#D79B00;strokeWidth=2;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="80" width="190" height="92" as="geometry"/>
+        </mxCell>
+        <mxCell id="fs" value="1 次 Free Spin&#xa;普通线奖 ×2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=2;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="200" width="190" height="82" as="geometry"/>
+        </mxCell>
+        <mxCell id="fs-no-meter" value="FS 内不加蓄水池分&#xa;FS 结束仍为 0" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E2F0D9;strokeColor=#82B366;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="410" width="190" height="76" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="return" value="回主游戏&#xa;下一次 Base Spin" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2F3E46;fontColor=#FFFFFF;strokeColor=#2F3E46;strokeWidth=2;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="535" width="190" height="86" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="mode-note" value="Beginner / Advanced&#xa;共用同一条 20 line map、蓄水池阈值与 FS 奖励&#xa;差异只在 strips 与 paytable" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2F8;strokeColor=#9FB6C6;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="720" y="430" width="370" height="95" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="commercial" value="&lt;b&gt;商业层解读&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Beginner&lt;/b&gt;&lt;br&gt;hit 31.78%｜SD 2.79&lt;br&gt;更密的低中符号权重；反馈频繁、波动较低，适合 onboarding 与平滑 session。&lt;br&gt;&lt;br&gt;&lt;b&gt;Advanced&lt;/b&gt;&lt;br&gt;hit 25.12%｜SD 4.91｜Max 2000x&lt;br&gt;Base 更干，顶部赔率更高；蓄水池承担“干旱期”的进度反馈与爆点期待。&lt;br&gt;&lt;br&gt;&lt;b&gt;共同商业作用&lt;/b&gt;&lt;br&gt;• 100 分进度条提供短期目标与留存钩子。&lt;br&gt;• 恰好 1 次 x2 FS 控制奖励频率与成本。&lt;br&gt;• 清零且无溢出，避免连续触发和奖励滚雪球。&lt;br&gt;• 无 Feature Buy，金币来源仍由 IAP / 广告提供。&lt;br&gt;&lt;br&gt;&lt;b&gt;设计 RTP / 1M&lt;/b&gt;&lt;br&gt;Beginner 94.85% / 94.39%&lt;br&gt;Advanced 94.44% / 93.37%" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2F8;strokeColor=#9FB6C6;strokeWidth=2;align=left;verticalAlign=top;spacing=12;fontSize=13;fontColor=#1F2933;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="105" width="320" height="830" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="special" value="&lt;b&gt;特殊情况与边界&lt;/b&gt;&lt;br&gt;• 无中奖线：不派彩、不加分，水位原样保留。&lt;br&gt;• 多条中奖线：每条分别计分，再把分数加总；不是按整盘只算一次。&lt;br&gt;• 恰好达到或跨过 100：本 Base Spin 都只触发 1 次 FS。&lt;br&gt;• 从 95 分直接加到 180、或直接从 0 到 200：都只触发 1 次，超出部分丢弃。&lt;br&gt;• Free Spin 只给 1 次且 ×2；FS 内中奖不再给蓄水池加分。&lt;br&gt;• Max Win：Beginner 500x；Advanced 2000x。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#B7C3CC;strokeWidth=2;align=left;verticalAlign=top;spacing=12;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="45" y="690" width="1450" height="240" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#52616B;endArrow=block;endFill=1;" edge="1" parent="1" source="base" target="lines"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#52616B;endArrow=block;endFill=1;" edge="1" parent="1" source="lines" target="d-win"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#82B366;endArrow=block;endFill=1;fontSize=12;fontColor=#38761D;" edge="1" parent="1" source="d-win" target="payout"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#52616B;endArrow=block;endFill=1;fontSize=12;" edge="1" parent="1" source="d-win" target="no-win"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#52616B;endArrow=block;endFill=1;" edge="1" parent="1" source="payout" target="meter-add"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#52616B;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="meter-add" target="d-meter"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#52616B;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="no-win" target="d-meter"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="840" y="430"/><mxPoint x="1082" y="430"/></Array></mxGeometry></mxCell>
+        <mxCell id="e8" value="否：保留水位" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#52616B;endArrow=block;endFill=1;fontSize=12;" edge="1" parent="1" source="d-meter" target="keep"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e9" value="是：只触发 1 次" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#82B366;endArrow=block;endFill=1;fontSize=12;fontColor=#38761D;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="d-meter" target="reset"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#52616B;endArrow=block;endFill=1;" edge="1" parent="1" source="reset" target="fs"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#52616B;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fs" target="fs-no-meter"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1395" y="390"/><mxPoint x="1395" y="390"/></Array></mxGeometry></mxCell>
+        <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#52616B;endArrow=block;endFill=1;" edge="1" parent="1" source="fs-no-meter" target="return"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#52616B;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="keep" target="return"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1395" y="470"/><mxPoint x="1395" y="470"/></Array></mxGeometry></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
